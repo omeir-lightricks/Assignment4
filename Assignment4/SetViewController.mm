@@ -44,13 +44,13 @@
 - (UIColor *)getCardColor:(CGSetCard *)card {
   UIColor *color = UIColor.greenColor;
 
-  if ([@"black" isEqualToString:card.colorName]) {
+  if (card.colorIdentifier == 1) {
     color = UIColor.blackColor;
   }
-  if ([@"blue" isEqualToString:card.colorName]) {
+  if (card.colorIdentifier == 2) {
     color = UIColor.blueColor;
   }
-  if ([@"red" isEqualToString:card.colorName]) {
+  if (card.colorIdentifier == 3) {
     color = UIColor.redColor;
   }
   return color;
@@ -60,7 +60,7 @@
   NSString *cardShapesText = @"";
 
   for (int i = 0; i < card.amount; i++) {
-    cardShapesText = [cardShapesText stringByAppendingString:card.shape];
+    cardShapesText = [cardShapesText stringByAppendingString:@"Q"];
   }
   return cardShapesText;
 }

@@ -13,14 +13,18 @@
     return self;
   }
   
-  for (NSAttributedStringKey colorName in [CGSetCard validColors]) {
-    for (NSString *shape in [CGSetCard validShapes]) {
-      for (NSUInteger amount = 1; amount <= [CGSetCard maxAmountOfShapesInCard]; amount++) {
-        CGSetCard *card = [[CGSetCard alloc] init];
-        [card setShape:shape];
-        [card setColorName:colorName];
-        [card setAmount:amount];
-        [self addCard:card];
+  for (NSUInteger amount = 1; amount <= [CGSetCard maxIdentifier]; amount++) {
+    for (NSUInteger colorIdentifier = 1; colorIdentifier <= [CGSetCard maxIdentifier]; colorIdentifier++) {
+      for (NSUInteger shapeIdentifier = 1; shapeIdentifier <= [CGSetCard maxIdentifier]; shapeIdentifier++) {
+        for (NSUInteger fillIdentifier = 1; fillIdentifier <= [CGSetCard maxIdentifier]; fillIdentifier++) {
+
+          CGSetCard *card = [[CGSetCard alloc] init];
+          [card setShapeIdentifier:shapeIdentifier];
+          [card setColorIdentifier:colorIdentifier];
+          [card setAmount:amount];
+          [self addCard:card];
+          
+        }
 
       }
     }

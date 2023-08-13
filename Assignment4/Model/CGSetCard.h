@@ -5,23 +5,15 @@
 
 @interface CGSetCard : CGCard
 
-@property (strong, nonatomic)NSString *shape;
+@property (nonatomic)NSInteger shapeIdentifier;
 
-@property (strong, nonatomic)NSAttributedStringKey colorName;
+@property (nonatomic)NSInteger colorIdentifier;
 
-@property (nonatomic) NSInteger amount;
+@property (nonatomic)NSInteger fillIdentifier;
 
-- (void)setAmount:(NSInteger)amount;
+@property (nonatomic)NSInteger amount;
 
-- (void)setColorName:(NSAttributedStringKey)colorName;
-
-- (void)setShape:(NSString *)shape;
-
-+ (NSArray<NSAttributedStringKey> *)validColors;
-
-+ (NSArray<NSString *> *)validShapes;
-
-+ (NSInteger)maxAmountOfShapesInCard;
++ (NSInteger)maxIdentifier;
 
 @end
 

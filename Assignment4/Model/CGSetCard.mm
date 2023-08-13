@@ -10,66 +10,58 @@
 
 @implementation CGSetCard
 
-+ (NSArray<NSAttributedStringKey> *)validColors {
-  return @[@"black", @"red", @"blue"];
-}
-
-+ (NSArray<NSString *> *)validShapes {
-  return @[@"▲", @"●", @"■"];
-}
-
-+ (NSInteger)maxAmountOfShapesInCard {
++ (NSInteger)maxIdentifier {
   return 3;
 }
 
-+ (BOOL)checkIfStringValuessAreLegalMatch:(NSString *)stringA
-                                  StringB:(NSString *)StringB
-                                  StringC:(NSString *)StringC {
-  return ([stringA isEqualToString:StringB] && [StringB isEqualToString:StringC]) ||
-  (![stringA isEqualToString:StringB] &&
-   ![stringA isEqualToString:StringC] &&
-   ![StringB isEqualToString:StringC]);
-}
-
-+ (BOOL)checkIfAmountValuessAreLegalMatch:(NSInteger)amountA
-                                     amountB:(NSInteger)amountB
-                                  amountC:(NSInteger)amountC {
-  return (amountA == amountB && amountB == amountC) ||
-  (amountA != amountB &&
-   amountB != amountC &&
-   amountA != amountC);
++ (BOOL)checkIfValuessAreLegalMatch:(NSInteger)valueA
+                             valueB:(NSInteger)valueB
+                             valueC:(NSInteger)valueC {
+  return (valueA == valueB && valueB == valueC) ||
+  (valueA != valueB &&
+   valueB != valueC &&
+   valueA != valueC);
  }
 
-- (void)setShape:(NSString *)shape {
-  if ([[CGSetCard validShapes] containsObject:shape]) {
-    _shape = shape;
+- (void)setFillIdentifier:(NSInteger)fillIdentifier {
+  if (fillIdentifier <= [CGSetCard maxIdentifier]) {
+    _fillIdentifier = fillIdentifier;
   }
 }
 
-- (void)setColorName:(NSAttributedStringKey)colorName {
-  if ([[CGSetCard validColors] containsObject:colorName]) {
-    _colorName = colorName;
+- (void)setShapeIdentifier:(NSInteger)shapeIdentifier {
+  if (shapeIdentifier <= [CGSetCard maxIdentifier]) {
+    _shapeIdentifier = shapeIdentifier;
+  }
+}
+
+- (void)setColorIdentifier:(NSInteger)colorIdentifier {
+  if (colorIdentifier <= [CGSetCard maxIdentifier]) {
+    _colorIdentifier = colorIdentifier;
   }
 }
 
 - (void)setAmount:(NSInteger)amount {
-  if (amount <= [CGSetCard maxAmountOfShapesInCard]) {
+  if (amount <= [CGSetCard maxIdentifier]) {
     _amount = amount;
   }
 }
 
-
 - (BOOL)isLegalMatch:(NSArray<CGSetCard *> *)otherCards {
   return
-    [CGSetCard checkIfStringValuessAreLegalMatch:_shape
-                                              StringB:otherCards[0].shape
-                                              StringC:otherCards[1].shape] &&
-    [CGSetCard checkIfStringValuessAreLegalMatch:_colorName
-                                            StringB:otherCards[0].colorName
-                                            StringC:otherCards[1].colorName] &&
-    [CGSetCard checkIfAmountValuessAreLegalMatch:_amount
-                                         amountB:otherCards[0].amount
-                                         amountC:otherCards[1].amount];
+    [CGSetCard checkIfValuessAreLegalMatch:otherCards[0].colorIdentifier
+                                    valueB:otherCards[1].colorIdentifier
+                                    valueC:otherCards[2].colorIdentifier] &&
+    [CGSetCard checkIfValuessAreLegalMatch:otherCards[0].amount
+                                    valueB:otherCards[1].amount
+                                    valueC:otherCards[2].amount] &&
+    [CGSetCard checkIfValuessAreLegalMatch:otherCards[0].shapeIdentifier
+                                    valueB:otherCards[1].shapeIdentifier
+                                    valueC:otherCards[2].shapeIdentifier] &&
+    [CGSetCard checkIfValuessAreLegalMatch:otherCards[0].fillIdentifier
+                                    valueB:otherCards[1].fillIdentifier
+                                    valueC:otherCards[2].fillIdentifier];
+
 }
 
 - (int)match:(NSArray *)otherCards {
