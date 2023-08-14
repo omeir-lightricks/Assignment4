@@ -1,7 +1,7 @@
 // Copyright (c) 2023 Lightricks. All rights reserved.
 // Created by Ori Meir.
 
-#import "Foundation/Foundation.h">
+#import <Foundation/Foundation.h>
 #import "CGCard.h"
 
 @interface CGDeck : NSObject

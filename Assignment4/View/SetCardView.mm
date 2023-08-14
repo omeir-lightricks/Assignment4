@@ -1,8 +1,9 @@
 // Copyright (c) 2023 Lightricks. All rights reserved.
 // Created by Ori Meir.
 
-#import "SetCardView.h"
 #import <Foundation/Foundation.h>
+#import "SetCardView.h"
+#import "CGSetCard.h"
 
 @interface SetCardView ()
 
@@ -11,11 +12,18 @@
 
 @implementation SetCardView
 
+#pragma mark -
+#pragma mark constants
+#pragma mark -
+
 const CGFloat kCornerRadius = 12.0;
 const CGFloat kCornerFontStandartSize = 180.0;
+const CGFloat kHalfCurveWidthPart = 8;
+const CGFloat kHalfCurveHightPart = 16;
+const CGFloat kSquiggleHightPart = 9;
 
 #pragma mark -
-#pragma mark setup and construcors
+#pragma mark init
 #pragma mark -
 
 - (void)setUp {
@@ -165,32 +173,40 @@ const CGFloat kCornerFontStandartSize = 180.0;
   return shapePath;
 }
 
-#define SQUIGGLE_WIDTH 0.12
-#define SQUIGGLE_HEIGHT 0.3
-#define SQUIGGLE_FACTOR 0.8
-#define SYMBOL_LINE_WIDTH 2
-
 - (UIBezierPath *)drawSquiggleAtPoint:(CGPoint)startPoint {
-  CGFloat dx = self.bounds.size.width * SQUIGGLE_WIDTH / 2.0;
-  CGFloat dy = self.bounds.size.height * SQUIGGLE_HEIGHT / 2.0;
-  CGFloat dsqx = dx * SQUIGGLE_FACTOR;
-  CGFloat dsqy = dy * SQUIGGLE_FACTOR;
+
+  CGFloat halfCurveWidth = self.bounds.size.width / kHalfCurveWidthPart;
+  CGFloat curveHight = self.bounds.size.height / kHalfCurveHightPart;
+  CGFloat squiggleHight = self.bounds.size.height / kSquiggleHightPart;
 
   UIBezierPath *path = [[UIBezierPath alloc] init];
-  [path moveToPoint:CGPointMake(startPoint.x - dx, startPoint.y - dy)];
-  [path addQuadCurveToPoint:CGPointMake(startPoint.x + dx, startPoint.y - dy)
-               controlPoint:CGPointMake(startPoint.x - dsqx, startPoint.y - dy - dsqy)];
-  [path addCurveToPoint:CGPointMake(startPoint.x + dx, startPoint.y + dy)
-          controlPoint1:CGPointMake(startPoint.x + dx + dsqx, startPoint.y - dy + dsqy)
-          controlPoint2:CGPointMake(startPoint.x + dx - dsqx, startPoint.y + dy - dsqy)];
-  [path addQuadCurveToPoint:CGPointMake(startPoint.x - dx, startPoint.y + dy)
-               controlPoint:CGPointMake(startPoint.x + dsqx, startPoint.y + dy + dsqy)];
-  [path addCurveToPoint:CGPointMake(startPoint.x - dx, startPoint.y - dy)
-          controlPoint1:CGPointMake(startPoint.x - dx - dsqx, startPoint.y + dy - dsqy)
-          controlPoint2:CGPointMake(startPoint.x - dx + dsqx, startPoint.y - dy + dsqy)];
-  [path closePath];
-  path.lineWidth = self.bounds.size.width * SYMBOL_LINE_WIDTH;
+  startPoint = CGPointMake(startPoint.x, startPoint.y - squiggleHight / 2);
+  [path moveToPoint:startPoint];
 
+  [path addQuadCurveToPoint:CGPointMake(startPoint.x + 2 * halfCurveWidth,
+                                        startPoint.y)
+               controlPoint:CGPointMake(startPoint.x + halfCurveWidth,
+                                        startPoint.y + curveHight)];
+  [path addQuadCurveToPoint:CGPointMake(startPoint.x + 4 * halfCurveWidth,
+                                        startPoint.y)
+               controlPoint:CGPointMake(startPoint.x + 3 * halfCurveWidth,
+                                        startPoint.y - curveHight)];
+
+  CGPoint lowerSquigglePoint = CGPointMake(startPoint.x + 4 * halfCurveWidth,
+                                           startPoint.y + squiggleHight);
+
+  [path addLineToPoint:lowerSquigglePoint];
+
+  [path addQuadCurveToPoint:CGPointMake(lowerSquigglePoint.x - 2 * halfCurveWidth,
+                                        lowerSquigglePoint.y)
+               controlPoint:CGPointMake(lowerSquigglePoint.x - halfCurveWidth,
+                                        lowerSquigglePoint.y - curveHight)];
+  [path addQuadCurveToPoint:CGPointMake(lowerSquigglePoint.x - 4 * halfCurveWidth,
+                                        lowerSquigglePoint.y)
+               controlPoint:CGPointMake(lowerSquigglePoint.x - 3 * halfCurveWidth,
+                                        lowerSquigglePoint.y + curveHight)];
+
+  [path closePath];
   return path;
 }
 
@@ -231,10 +247,6 @@ const CGFloat kCornerFontStandartSize = 180.0;
 
   [[UIColor blackColor] setStroke];
   [roundedRect stroke];
-  self.shapeIdentifier = 3;
-  self.amount = 1;
-  self.fillIdentifier = 1;
-  self.colorIdentifier = 3;
 
   [self drawShapesByAmount];
 }

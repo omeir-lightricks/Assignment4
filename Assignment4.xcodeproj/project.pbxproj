@@ -27,6 +27,8 @@
 		8AE0020F2A8518B400034885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0020E2A8518B400034885 /* Main.storyboard */; };
 		8AE002112A8518CE00034885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE002102A8518CE00034885 /* Assets.xcassets */; };
 		8AE002142A88F34F00034885 /* SetCardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE002122A88F34F00034885 /* SetCardView.mm */; };
+		8AE002182A8A068E00034885 /* cardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE002162A8A068E00034885 /* cardView.mm */; };
+		8AE0021B2A8A099E00034885 /* PlayingCardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE002192A8A099E00034885 /* PlayingCardView.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,10 @@
 		8AE002102A8518CE00034885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Desktop/MacthismoGame/MacthismoGame/Assets.xcassets; sourceTree = "<group>"; };
 		8AE002122A88F34F00034885 /* SetCardView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SetCardView.mm; sourceTree = "<group>"; };
 		8AE002132A88F34F00034885 /* SetCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetCardView.h; sourceTree = "<group>"; };
+		8AE002162A8A068E00034885 /* cardView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = cardView.mm; sourceTree = "<group>"; };
+		8AE002172A8A068E00034885 /* cardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cardView.h; sourceTree = "<group>"; };
+		8AE002192A8A099E00034885 /* PlayingCardView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayingCardView.mm; sourceTree = "<group>"; };
+		8AE0021A2A8A099E00034885 /* PlayingCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +210,12 @@
 		8AE002152A88F51B00034885 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8AE002172A8A068E00034885 /* cardView.h */,
+				8AE002162A8A068E00034885 /* cardView.mm */,
 				8AE002132A88F34F00034885 /* SetCardView.h */,
 				8AE002122A88F34F00034885 /* SetCardView.mm */,
+				8AE0021A2A8A099E00034885 /* PlayingCardView.h */,
+				8AE002192A8A099E00034885 /* PlayingCardView.mm */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,7 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AE001FE2A85188C00034885 /* CGSetDeck.mm in Sources */,
+				8AE002182A8A068E00034885 /* cardView.mm in Sources */,
 				8AE002142A88F34F00034885 /* SetCardView.mm in Sources */,
+				8AE0021B2A8A099E00034885 /* PlayingCardView.mm in Sources */,
 				8AE001FB2A85188C00034885 /* CGCard.mm in Sources */,
 				8AE0020D2A85189D00034885 /* PlayingViewController.mm in Sources */,
 				8AE001B82A85183D00034885 /* AppDelegate.m in Sources */,

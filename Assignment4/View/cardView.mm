@@ -3,10 +3,7 @@
 
 #import "cardView.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @implementation cardView
 
 @end
 
-NS_ASSUME_NONNULL_END

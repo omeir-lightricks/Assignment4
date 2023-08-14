@@ -1,10 +1,13 @@
 // Copyright (c) 2023 Lightricks. All rights reserved.
 // Created by Ori Meir.
 
-NS_ASSUME_NONNULL_BEGIN
+#import "cardView.h"
 
 @interface PlayingCardView : cardView
 
+@property (nonatomic) NSUInteger rank;
+@property (strong, nonatomic) NSString *suit;
+@property (nonatomic) BOOL faceUp;
+
 @end
 
-NS_ASSUME_NONNULL_END

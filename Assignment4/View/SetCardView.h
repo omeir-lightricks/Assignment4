@@ -1,10 +1,9 @@
 // Copyright (c) 2023 Lightricks. All rights reserved.
 // Created by Ori Meir.
 
-#import <UIKit/UIKit.h>
-#import "CGSetCard.h"
+#import "cardView.h"
 
-@interface SetCardView : UIView
+@interface SetCardView : cardView
 
 @property (nonatomic)NSInteger shapeIdentifier;
 

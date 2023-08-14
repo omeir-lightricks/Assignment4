@@ -22,6 +22,7 @@
           [card setShapeIdentifier:shapeIdentifier];
           [card setColorIdentifier:colorIdentifier];
           [card setAmount:amount];
+          [card setFillIdentifier:fillIdentifier];
           [self addCard:card];
           
         }
