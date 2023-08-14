@@ -5,5 +5,10 @@
 
 @implementation cardView
 
+- (void)setChosen:(BOOL)chosen {
+  _chosen = chosen;
+  [self setNeedsDisplay];
+}
+
 @end
 

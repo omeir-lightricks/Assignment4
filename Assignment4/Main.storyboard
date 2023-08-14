@@ -92,6 +92,10 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-A5-ZzP">
                                 <rect key="frame" x="0.0" y="70" width="393" height="486"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="18c-nY-U9j" appends="YES" id="Uzw-6R-PCS"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-KT-iWG">
                                 <rect key="frame" x="149" y="685" width="95" height="51"/>
@@ -127,6 +131,7 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="TapOnCard" destination="18c-nY-U9j" id="gkT-JI-t1Q"/>
                         <outlet property="cardsScreen" destination="rsF-A5-ZzP" id="iFA-2F-8yT"/>
                         <outlet property="scoreLabel" destination="fX4-ls-r4Y" id="eId-Sz-e18"/>
                     </connections>
@@ -141,6 +146,11 @@
                         <attributedString key="attributedTitle"/>
                     </buttonConfiguration>
                 </button>
+                <tapGestureRecognizer id="18c-nY-U9j">
+                    <connections>
+                        <action selector="handleSingleTap:" destination="m7k-gp-mxx" id="Jce-dJ-s9C"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1089.3129770992366" y="-695.07042253521126"/>
         </scene>

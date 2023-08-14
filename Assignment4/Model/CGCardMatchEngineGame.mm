@@ -68,7 +68,6 @@
   lastCard.matched = self.lastPointsChange > 0;
 }
 
-
 - (void)chooseCardAtIndex:(NSUInteger)index {
   CGCard *card = [self cardAtIndex:index];
 

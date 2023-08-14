@@ -31,6 +31,8 @@ const CGFloat kDefaultFaceCardScaleFactor = 0.9;
 }
 
 - (void)setUp {
+  self.chosen = NO;
+  self.removedFromView = NO;
   self.backgroundColor = nil;
   self.opaque = NO;
   self.contentMode = UIViewContentModeRedraw;

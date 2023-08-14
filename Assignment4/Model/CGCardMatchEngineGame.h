@@ -9,6 +9,9 @@
 
 @property (nonatomic, readonly)NSInteger score;
 
+- (NSMutableArray<CGCard *> *)cards;
+
+
 - (instancetype)initWithCardCount:(NSUInteger)count
                         usingDeck:(CGDeck *)deck;
 

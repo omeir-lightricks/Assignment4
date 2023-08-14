@@ -5,5 +5,9 @@
 
 @interface cardView : UIView
 
+@property (nonatomic) BOOL removedFromView;
+@property (nonatomic) BOOL chosen;
+
+
 @end
 

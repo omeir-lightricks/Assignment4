@@ -51,16 +51,16 @@
   return
     [CGSetCard checkIfValuessAreLegalMatch:otherCards[0].colorIdentifier
                                     valueB:otherCards[1].colorIdentifier
-                                    valueC:otherCards[2].colorIdentifier] &&
+                                    valueC:self.colorIdentifier] &&
     [CGSetCard checkIfValuessAreLegalMatch:otherCards[0].amount
                                     valueB:otherCards[1].amount
-                                    valueC:otherCards[2].amount] &&
+                                    valueC:self.amount] &&
     [CGSetCard checkIfValuessAreLegalMatch:otherCards[0].shapeIdentifier
                                     valueB:otherCards[1].shapeIdentifier
-                                    valueC:otherCards[2].shapeIdentifier] &&
+                                    valueC:self.shapeIdentifier] &&
     [CGSetCard checkIfValuessAreLegalMatch:otherCards[0].fillIdentifier
                                     valueB:otherCards[1].fillIdentifier
-                                    valueC:otherCards[2].fillIdentifier];
+                                    valueC:self.fillIdentifier];
 
 }
 

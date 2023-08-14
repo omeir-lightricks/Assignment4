@@ -22,6 +22,7 @@
   newView.colorIdentifier = card.colorIdentifier;
   newView.fillIdentifier = card.fillIdentifier;
   newView.amount = card.amount;
+  newView.chosen = NO;
   return newView;
 }
 

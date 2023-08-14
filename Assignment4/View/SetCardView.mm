@@ -27,6 +27,7 @@ const CGFloat kSquiggleHightPart = 9;
 #pragma mark -
 
 - (void)setUp {
+  self.removedFromView = NO;
   self.backgroundColor = nil;
   self.opaque = NO;
   self.contentMode = UIViewContentModeRedraw;
@@ -242,7 +243,7 @@ const CGFloat kSquiggleHightPart = 9;
                                                           cornerRadius:[self cornerRadius]];
   [roundedRect addClip];
 
-  [[UIColor whiteColor] setFill];
+  [self.chosen ? [UIColor yellowColor] : [UIColor whiteColor] setFill];
   UIRectFill(self.bounds);
 
   [[UIColor blackColor] setStroke];
