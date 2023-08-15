@@ -3,6 +3,9 @@
 
 #import "PlayingViewController.h"
 #import "CGPlayingCardDeck.h"
+#import "CGPlayingCard.h"
+#import "PlayingCardView.h"
+
 
 @interface PlayingViewController ()
 
@@ -10,17 +13,25 @@
 
 @implementation PlayingViewController : ViewController
 
-- (NSAttributedString *)lastCoiceResultsMessage:(NSInteger)pointsGiven {
-  NSMutableAttributedString *message = [[NSMutableAttributedString alloc] initWithString:@""];
+- (cardView *)getNewCardView:(CGPlayingCard *)card {
+  PlayingCardView *newView = [[PlayingCardView alloc] init];
+  newView.rank = card.rank;
+  newView.suit = card.suit;
+  newView.chosen = NO;
+  return newView;
+}
 
-  [message appendAttributedString:[[NSAttributedString alloc] initWithString:
-                                   pointsGiven > 0 ? @"are good choice!\n" : @"are bad choice!\n"]];
-  [message appendAttributedString:[[NSAttributedString alloc] initWithString:
-                                   [NSString localizedStringWithFormat:@"%ld points ", pointsGiven]]];
-  [message appendAttributedString:[[NSAttributedString alloc] initWithString:
-                                    pointsGiven > 0 ? @"bonus" : @"penalty"]] ;
+- (void)updateCardState:(CGPlayingCard *)card
+                   view:(PlayingCardView *)view{
+  view.chosen = card.chosen;
+  if (view.faceUp != card.chosen) {
+    view.faceUp = !view.faceUp;
+    if (view.faceUp) {
+      [UIView animateWithDuration:2.0
+                       animations:^{[view flip];}];
+    }
 
-  return message;
+  }
 }
 
 - (CGDeck *)resetDeck {
@@ -31,14 +42,7 @@
   return NO;
 }
 
-- (NSNumber *)getTextWidth:(CGCard *)card {
-  return card.isMatched ? @1 : @7;
-}
 
-- (NSString *)titleForCard:(CGCard *)card showAnyway:(BOOL)showAnyway {
-  // TODO: fix this function
-  return card.isChosen || card.isMatched || showAnyway ? card.contents : @"";
-}
 
 - (UIImage *)backgroundImageForCard:(CGCard *)card {
   return [UIImage imageNamed:card.isChosen || card.isMatched  ? @"cardfront" : @"cardback"];

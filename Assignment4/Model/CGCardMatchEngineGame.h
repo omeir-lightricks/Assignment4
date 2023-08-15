@@ -22,9 +22,10 @@
 - (NSMutableArray<CGCard *> *)lastCardsChosen;
 
 - (NSInteger)lastPointsChange;
-//  Executes user choise of any card
+
 - (void)chooseCardAtIndex:(NSUInteger)index;
 
+- (CGCard *)dealMore:(CGDeck *)deck;
 
 
 

@@ -93,6 +93,13 @@
   }
 }
 
+- (CGCard *)dealMore:(CGDeck *)deck {
+  CGCard *newCard = [deck drawRandomCard];
+  [self.cards addObject:newCard];
+  self.score -= 3;
+  return newCard;
+}
+
 @end
 
 

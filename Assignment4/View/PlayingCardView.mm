@@ -119,22 +119,12 @@ const CGFloat kDefaultFaceCardScaleFactor = 0.9;
 
 }
 
-- (void)drawRect:(CGRect)rect {
-
-
-  UIBezierPath *roundedRect = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-                                                          cornerRadius:[self cornerRadius]];
-  [roundedRect addClip];
-  [[UIColor whiteColor] setFill];
-  UIRectFill(self.bounds);
-  [[UIColor blackColor] setStroke];
-  [roundedRect stroke];
-
-
-  NSString *imageName =[NSString stringWithFormat:@"%@%@", [self rankAsString], self.suit];
-  UIImage *faceImage = [UIImage imageNamed:imageName];
+- (void)flip {
 
   if (self.faceUp) {
+
+    NSString *imageName =[NSString stringWithFormat:@"%@%@", [self rankAsString], self.suit];
+    UIImage *faceImage = [UIImage imageNamed:imageName];
 
     if (faceImage) {
       CGRect imageRect = CGRectInset(self.bounds,
@@ -150,6 +140,24 @@ const CGFloat kDefaultFaceCardScaleFactor = 0.9;
   } else {
     [[UIImage imageNamed:@"cardback"] drawInRect:self.bounds];
   }
+
+}
+
+- (void)drawRect:(CGRect)rect {
+
+  UIBezierPath *roundedRect = [UIBezierPath bezierPathWithRoundedRect:self.bounds
+                                                          cornerRadius:[self cornerRadius]];
+  [roundedRect addClip];
+  [[UIColor whiteColor] setFill];
+  UIRectFill(self.bounds);
+  [[UIColor blackColor] setStroke];
+  [roundedRect stroke];
+
+
+  NSString *imageName =[NSString stringWithFormat:@"%@%@", [self rankAsString], self.suit];
+  UIImage *faceImage = [UIImage imageNamed:imageName];
+
+  [self flip];
 
 
 }
