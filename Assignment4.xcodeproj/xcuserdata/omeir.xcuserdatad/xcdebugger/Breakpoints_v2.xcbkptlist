@@ -87,54 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "623830BF-E13B-423B-9BC8-2F1C77753DAB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Assignment4/View/PlayingCardView.mm"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "-drawRect:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "623830BF-E13B-423B-9BC8-2F1C77753DAB - 2fb4770c1a4105e6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PlayingCardView drawRect:]"
-                  moduleName = "Assignment4"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/omeir/Developer/bootcamp/Assignment4/Assignment4/View/PlayingCardView.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "664">
-               </Location>
-               <Location
-                  uuid = "623830BF-E13B-423B-9BC8-2F1C77753DAB - 2fb4770c1a4105c5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PlayingCardView drawRect:]"
-                  moduleName = "Assignment4"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/omeir/Developer/bootcamp/Assignment4/Assignment4/View/PlayingCardView.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "616">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "CE59CE7E-144E-4C6B-BF7C-133C6B985A78"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -142,8 +94,8 @@
             filePath = "Assignment4/View/PlayingCardView.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-drawRect:"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +190,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "-handleSingleTap:"
             landmarkType = "7">
             <Locations>
@@ -316,8 +268,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-handleSingleTap:"
             landmarkType = "7">
             <Locations>
@@ -364,8 +316,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "-handleSingleTap:"
             landmarkType = "7">
             <Locations>
@@ -412,8 +364,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "-dealMore:"
             landmarkType = "7">
          </BreakpointContent>
@@ -428,8 +380,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "-dealMore:"
             landmarkType = "7">
          </BreakpointContent>
@@ -444,8 +396,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "-resetGame"
             landmarkType = "7">
          </BreakpointContent>
@@ -454,38 +406,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "72AE1FDE-FE41-4C53-91B0-A582EF941FBD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-game"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F294DB9A-357F-4736-AB8A-47CFE160B326"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-game"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B79D80EE-E43E-4167-A09F-C749511BABA6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -501,6 +421,38 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "F294DB9A-357F-4736-AB8A-47CFE160B326"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-game"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B79D80EE-E43E-4167-A09F-C749511BABA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-game"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "5540316E-B04D-40E4-81BF-9639E221922D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -508,8 +460,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "-updateUI"
             landmarkType = "7">
          </BreakpointContent>
@@ -540,8 +492,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "-newGame:"
             landmarkType = "7">
          </BreakpointContent>
@@ -556,8 +508,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "-hideAllCards"
             landmarkType = "7">
             <Locations>
@@ -604,8 +556,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "-newGame:"
             landmarkType = "7">
          </BreakpointContent>
@@ -620,8 +572,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-updateCardsViews"
             landmarkType = "7">
             <Locations>
@@ -668,8 +620,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-updateCardsProperties"
             landmarkType = "7">
             <Locations>
@@ -716,8 +668,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "-handleSingleTap:"
             landmarkType = "7">
          </BreakpointContent>
@@ -732,8 +684,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "-handleSingleTap:"
             landmarkType = "7">
          </BreakpointContent>
@@ -780,8 +732,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-updateCardsProperties"
             landmarkType = "7">
             <Locations>
@@ -828,8 +780,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-updateCardsProperties"
             landmarkType = "7">
          </BreakpointContent>
@@ -860,8 +812,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "-newGame:"
             landmarkType = "7">
          </BreakpointContent>
@@ -876,8 +828,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "-updateCardsViews"
             landmarkType = "7">
             <Locations>
@@ -924,8 +876,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-updateCardsViews"
             landmarkType = "7">
             <Locations>
@@ -972,8 +924,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "-updateCardsViews"
             landmarkType = "7">
          </BreakpointContent>
@@ -988,8 +940,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-createViewForCard:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1004,8 +956,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-removeViewForCard:"
             landmarkType = "7">
             <Locations>
@@ -1067,8 +1019,8 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-hideAllCards"
             landmarkType = "7">
          </BreakpointContent>
@@ -1083,10 +1035,122 @@
             filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "-removeViewForCard:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE2398D7-D033-48B4-AD22-ED61A25BDA99"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "-handlePinch:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A26F5F30-B397-4E71-B1AD-365178B88735"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "-handleGroupedCardsMovement:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A26F5F30-B397-4E71-B1AD-365178B88735 - 5c0d9b11552bbf6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController handleGroupedCardsMovement:]"
+                  moduleName = "Assignment4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omeir/Desktop/MacthismoGame/MacthismoGame/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "A26F5F30-B397-4E71-B1AD-365178B88735 - 5c0d9b11552bbf6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController handleGroupedCardsMovement:]"
+                  moduleName = "Assignment4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omeir/Desktop/MacthismoGame/MacthismoGame/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CBCEBFB-124D-4B70-B713-9E56E9EA93C5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment4/View/PlayingCardView.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "-drawRect:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0CBCEBFB-124D-4B70-B713-9E56E9EA93C5 - 2fb4770c1a410796"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PlayingCardView drawRect:]"
+                  moduleName = "Assignment4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omeir/Developer/bootcamp/Assignment4/Assignment4/View/PlayingCardView.mm"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "0CBCEBFB-124D-4B70-B713-9E56E9EA93C5 - 2fb4770c1a410796"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PlayingCardView drawRect:]"
+                  moduleName = "Assignment4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omeir/Developer/bootcamp/Assignment4/Assignment4/View/PlayingCardView.mm"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -16,7 +16,7 @@
 #pragma mark -
 
 const CGFloat kCornerRadius = 12.0;
-const CGFloat kCornerFontStandartSize = 180.0;
+const CGFloat kCornerFontStandartSize = 140.0;
 const CGFloat kDefaultFaceCardScaleFactor = 0.9;
 
 #pragma mark -
@@ -150,16 +150,10 @@ const CGFloat kDefaultFaceCardScaleFactor = 0.9;
   [roundedRect addClip];
   [[UIColor whiteColor] setFill];
   UIRectFill(self.bounds);
-  [[UIColor blackColor] setStroke];
+  [[UIColor whiteColor] setStroke];
   [roundedRect stroke];
 
-
-  NSString *imageName =[NSString stringWithFormat:@"%@%@", [self rankAsString], self.suit];
-  UIImage *faceImage = [UIImage imageNamed:imageName];
-
   [self flip];
-
-
 }
 
 - (void)drawPips {

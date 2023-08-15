@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m7k-gp-mxx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1RS-4U-TGg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -35,9 +35,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2P-cL-SCS">
-                                <rect key="frame" x="149" y="702" width="95" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2P-cL-SCS">
+                                <rect key="frame" x="269" y="660" width="107.66666666666669" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Uj7-xA-lbJ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="New Game">
                                     <backgroundConfiguration key="background">
@@ -49,25 +51,35 @@
                                     <action selector="newGame:" destination="RNE-pJ-36O" eventType="touchUpInside" id="CnL-C7-MhP"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29L-sZ-S7H">
-                                <rect key="frame" x="0.0" y="70" width="393" height="528"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nh9-kc-f9A" appends="YES" id="AGA-2G-s8S"/>
-                                </connections>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score = 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrq-71-iNL">
-                                <rect key="frame" x="0.0" y="635" width="393" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score = 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrq-71-iNL">
+                                <rect key="frame" x="269" y="600" width="107.66666666666669" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29L-sZ-S7H">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="490"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nh9-kc-f9A" appends="YES" id="AGA-2G-s8S"/>
+                                    <outletCollection property="gestureRecognizers" destination="7bC-T2-8dK" appends="YES" id="Kjz-FL-Dml"/>
+                                    <outletCollection property="gestureRecognizers" destination="gu5-eq-gU7" appends="YES" id="0ir-GP-Jrm"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hTn-cY-eHN"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="nrq-71-iNL" firstAttribute="top" secondItem="29L-sZ-S7H" secondAttribute="bottom" constant="40" id="08k-hx-jLM"/>
+                            <constraint firstItem="h2P-cL-SCS" firstAttribute="top" secondItem="nrq-71-iNL" secondAttribute="bottom" constant="35" id="HqC-FD-Wjz"/>
+                            <constraint firstItem="hTn-cY-eHN" firstAttribute="trailing" secondItem="h2P-cL-SCS" secondAttribute="trailing" constant="16.333333333333371" id="IQI-fR-a5B"/>
+                            <constraint firstItem="29L-sZ-S7H" firstAttribute="leading" secondItem="hTn-cY-eHN" secondAttribute="leading" id="MR0-Gg-i0T"/>
+                            <constraint firstItem="29L-sZ-S7H" firstAttribute="centerX" secondItem="quq-bt-2uq" secondAttribute="centerX" id="P1p-7O-n8v"/>
+                            <constraint firstItem="nrq-71-iNL" firstAttribute="leading" secondItem="h2P-cL-SCS" secondAttribute="leading" id="VWf-JH-a6B"/>
+                            <constraint firstItem="hTn-cY-eHN" firstAttribute="bottom" secondItem="h2P-cL-SCS" secondAttribute="bottom" constant="58" id="WB6-xo-Lvc"/>
+                            <constraint firstItem="29L-sZ-S7H" firstAttribute="top" secondItem="quq-bt-2uq" secondAttribute="topMargin" constant="-33" id="qvI-nh-aqL"/>
+                            <constraint firstItem="nrq-71-iNL" firstAttribute="centerX" secondItem="h2P-cL-SCS" secondAttribute="centerX" id="sOh-pV-iOA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rTO-zE-pZe"/>
                     <connections>
@@ -81,6 +93,16 @@
                         <action selector="handleSingleTap:" destination="RNE-pJ-36O" id="QhH-Sq-FNJ"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7bC-T2-8dK">
+                    <connections>
+                        <action selector="handleGroupedCardsMovement:" destination="RNE-pJ-36O" id="CO0-QY-d1a"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="gu5-eq-gU7">
+                    <connections>
+                        <action selector="handlePinch:" destination="RNE-pJ-36O" id="gth-sO-kIH"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1089.3129770992366" y="-37.323943661971832"/>
         </scene>
@@ -92,17 +114,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-A5-ZzP">
-                                <rect key="frame" x="0.0" y="70" width="393" height="486"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="18c-nY-U9j" appends="YES" id="Uzw-6R-PCS"/>
-                                </connections>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EV6-Wl-XQT">
-                                <rect key="frame" x="283" y="685" width="94" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EV6-Wl-XQT">
+                                <rect key="frame" x="283" y="669" width="94" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="aBM-gm-AWG"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="New Game">
                                     <backgroundConfiguration key="background">
@@ -114,16 +130,17 @@
                                     <action selector="newGame:" destination="m7k-gp-mxx" eventType="touchUpInside" id="fOo-2Z-A4q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score = 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-ls-r4Y">
-                                <rect key="frame" x="0.0" y="586" width="393" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score = 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-ls-r4Y">
+                                <rect key="frame" x="283" y="564" width="94" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-KT-iWG">
-                                <rect key="frame" x="9" y="685" width="94" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-KT-iWG">
+                                <rect key="frame" x="283" y="610" width="94" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="AE8-Em-1Ig"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Deal more">
                                     <backgroundConfiguration key="background">
@@ -135,9 +152,36 @@
                                     <action selector="dealMore:" destination="m7k-gp-mxx" eventType="touchUpInside" id="GLh-Br-BjN"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-A5-ZzP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="556"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="18c-nY-U9j" appends="YES" id="Uzw-6R-PCS"/>
+                                    <outletCollection property="gestureRecognizers" destination="CTT-1B-Iz7" appends="YES" id="NQd-j5-iVd"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zL9-gT-iiC"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fX4-ls-r4Y" firstAttribute="trailing" secondItem="Jzw-KT-iWG" secondAttribute="trailing" id="IFG-g0-Kyc"/>
+                            <constraint firstAttribute="trailing" secondItem="rsF-A5-ZzP" secondAttribute="trailing" id="IrY-il-OGz"/>
+                            <constraint firstItem="fX4-ls-r4Y" firstAttribute="leading" secondItem="zL9-gT-iiC" secondAttribute="leading" constant="283" id="Oi4-Vc-noY"/>
+                            <constraint firstItem="fX4-ls-r4Y" firstAttribute="trailing" secondItem="iAQ-ae-ur0" secondAttribute="trailingMargin" id="PCx-lp-luo"/>
+                            <constraint firstItem="rsF-A5-ZzP" firstAttribute="leading" secondItem="iAQ-ae-ur0" secondAttribute="leading" id="RPz-ts-wf1"/>
+                            <constraint firstItem="zL9-gT-iiC" firstAttribute="bottom" secondItem="EV6-Wl-XQT" secondAttribute="bottom" constant="49" id="ZCg-pE-JGY"/>
+                            <constraint firstItem="Jzw-KT-iWG" firstAttribute="top" secondItem="fX4-ls-r4Y" secondAttribute="bottom" constant="20" id="htI-Mk-laJ"/>
+                            <constraint firstItem="EV6-Wl-XQT" firstAttribute="top" secondItem="Jzw-KT-iWG" secondAttribute="bottom" constant="8" symbolic="YES" id="lFc-9X-IZ7"/>
+                            <constraint firstItem="fX4-ls-r4Y" firstAttribute="leading" secondItem="Jzw-KT-iWG" secondAttribute="leading" id="nbo-zm-QbJ"/>
+                            <constraint firstItem="Jzw-KT-iWG" firstAttribute="leading" secondItem="EV6-Wl-XQT" secondAttribute="leading" id="o3M-9H-KTg"/>
+                            <constraint firstItem="fX4-ls-r4Y" firstAttribute="top" secondItem="rsF-A5-ZzP" secondAttribute="bottom" constant="8" symbolic="YES" id="t5q-7S-Qai"/>
+                            <constraint firstItem="rsF-A5-ZzP" firstAttribute="top" secondItem="iAQ-ae-ur0" secondAttribute="top" id="u1L-j4-rfM"/>
+                            <constraint firstItem="Jzw-KT-iWG" firstAttribute="trailing" secondItem="EV6-Wl-XQT" secondAttribute="trailing" id="xQS-w2-ZFg"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="taW-Sy-iOJ" appends="YES" id="VAf-FZ-pb0"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="hdN-8H-syD">
                         <nil key="title"/>
@@ -168,6 +212,16 @@
                         <action selector="handleSingleTap:" destination="m7k-gp-mxx" id="Jce-dJ-s9C"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pinchGestureRecognizer id="CTT-1B-Iz7">
+                    <connections>
+                        <action selector="handlePinch:" destination="m7k-gp-mxx" id="1UX-gf-SYF"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="taW-Sy-iOJ">
+                    <connections>
+                        <action selector="handleGroupedCardsMovement:" destination="m7k-gp-mxx" id="dQZ-sJ-RoY"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1089.3129770992366" y="-695.07042253521126"/>
         </scene>
@@ -225,17 +279,14 @@
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
