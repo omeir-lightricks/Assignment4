@@ -22,7 +22,7 @@
 }
 
 - (void)updateCardState:(CGPlayingCard *)card
-                   view:(PlayingCardView *)view{
+                   view:(PlayingCardView *)view {
   view.chosen = card.chosen;
   if (view.faceUp != card.chosen) {
     view.faceUp = !view.faceUp;
@@ -30,7 +30,6 @@
       [UIView animateWithDuration:2.0
                        animations:^{[view flip];}];
     }
-
   }
 }
 
@@ -41,8 +40,6 @@
 - (BOOL)isThreeModeOn {
   return NO;
 }
-
-
 
 - (UIImage *)backgroundImageForCard:(CGCard *)card {
   return [UIImage imageNamed:card.isChosen || card.isMatched  ? @"cardfront" : @"cardback"];
