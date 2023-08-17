@@ -20,20 +20,17 @@
   return 13;
 }
 
-
 + (NSArray *)validSuits {
   return @[@"♥" ,@"♦", @"♠" ,@"♣"];
 }
 
-- (void)setSuit:(NSString *)suit
-{
+- (void)setSuit:(NSString *)suit {
   if ([[CGPlayingCard validSuits] containsObject:suit]) {
     _suit = suit;
   }
 }
 
-- (NSString *)suit
-{
+- (NSString *)suit {
   return _suit ? _suit : @"?";
 }
 

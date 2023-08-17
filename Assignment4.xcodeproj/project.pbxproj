@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AA7E57B2A8DF2DD005822DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7E5792A8DF2AA005822DE /* ViewController.m */; };
 		8AE001B82A85183D00034885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE001B72A85183D00034885 /* AppDelegate.m */; };
 		8AE001BB2A85183D00034885 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE001BA2A85183D00034885 /* SceneDelegate.m */; };
 		8AE001C62A85183E00034885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE001C42A85183E00034885 /* LaunchScreen.storyboard */; };
@@ -21,7 +22,6 @@
 		8AE001FF2A85188C00034885 /* CGPlayingCardDeck.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE001F42A85188C00034885 /* CGPlayingCardDeck.mm */; };
 		8AE002002A85188C00034885 /* CGSetCard.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE001F52A85188C00034885 /* CGSetCard.mm */; };
 		8AE002012A85188C00034885 /* CGPlayingCard.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE001F62A85188C00034885 /* CGPlayingCard.mm */; };
-		8AE0020A2A85189D00034885 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE002022A85189D00034885 /* ViewController.m */; };
 		8AE0020B2A85189D00034885 /* SetViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE002042A85189D00034885 /* SetViewController.mm */; };
 		8AE0020D2A85189D00034885 /* PlayingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE002082A85189D00034885 /* PlayingViewController.mm */; };
 		8AE0020F2A8518B400034885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0020E2A8518B400034885 /* Main.storyboard */; };
@@ -49,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8AA7E5792A8DF2AA005822DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controller/ViewController.m; sourceTree = "<group>"; };
+		8AA7E57C2A8E36A9005822DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8AE001B32A85183D00034885 /* Assignment4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE001B62A85183D00034885 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8AE001B72A85183D00034885 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,8 +78,6 @@
 		8AE001F82A85188C00034885 /* CGPlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPlayingCard.h; sourceTree = "<group>"; };
 		8AE001F92A85188C00034885 /* CGCardMatchEngineGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGCardMatchEngineGame.h; sourceTree = "<group>"; };
 		8AE001FA2A85188C00034885 /* CGPlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPlayingCardDeck.h; sourceTree = "<group>"; };
-		8AE002022A85189D00034885 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../../Desktop/MacthismoGame/MacthismoGame/ViewController.m; sourceTree = "<group>"; };
-		8AE002032A85189D00034885 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../../Desktop/MacthismoGame/MacthismoGame/ViewController.h; sourceTree = "<group>"; };
 		8AE002042A85189D00034885 /* SetViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SetViewController.mm; sourceTree = "<group>"; };
 		8AE002052A85189D00034885 /* PlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingViewController.h; sourceTree = "<group>"; };
 		8AE002082A85189D00034885 /* PlayingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayingViewController.mm; sourceTree = "<group>"; };
@@ -143,13 +143,13 @@
 				8AE002152A88F51B00034885 /* View */,
 				8AE001EC2A85185300034885 /* Model */,
 				8AE001EB2A85184700034885 /* SupportingFiles */,
+				8AE0020E2A8518B400034885 /* Main.storyboard */,
 				8AE002052A85189D00034885 /* PlayingViewController.h */,
 				8AE002082A85189D00034885 /* PlayingViewController.mm */,
 				8AE002092A85189D00034885 /* SetViewController.h */,
 				8AE002042A85189D00034885 /* SetViewController.mm */,
-				8AE002032A85189D00034885 /* ViewController.h */,
-				8AE002022A85189D00034885 /* ViewController.m */,
-				8AE0020E2A8518B400034885 /* Main.storyboard */,
+				8AA7E57C2A8E36A9005822DE /* ViewController.h */,
+				8AA7E5792A8DF2AA005822DE /* ViewController.m */,
 				8AE002102A8518CE00034885 /* Assets.xcassets */,
 				8AE001C42A85183E00034885 /* LaunchScreen.storyboard */,
 				8AE001C72A85183E00034885 /* Info.plist */,
@@ -189,12 +189,12 @@
 		8AE001EC2A85185300034885 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8AE001F72A85188C00034885 /* CGCard.h */,
-				8AE001EE2A85188C00034885 /* CGCard.mm */,
 				8AE001F92A85188C00034885 /* CGCardMatchEngineGame.h */,
 				8AE001EF2A85188C00034885 /* CGCardMatchEngineGame.mm */,
 				8AE001F22A85188C00034885 /* CGDeck.h */,
 				8AE001F02A85188C00034885 /* CGDeck.mm */,
+				8AE001F72A85188C00034885 /* CGCard.h */,
+				8AE001EE2A85188C00034885 /* CGCard.mm */,
 				8AE001F82A85188C00034885 /* CGPlayingCard.h */,
 				8AE001F62A85188C00034885 /* CGPlayingCard.mm */,
 				8AE001FA2A85188C00034885 /* CGPlayingCardDeck.h */,
@@ -360,7 +360,7 @@
 				8AE001C92A85183E00034885 /* main.m in Sources */,
 				8AE001BB2A85183D00034885 /* SceneDelegate.m in Sources */,
 				8AE0020B2A85189D00034885 /* SetViewController.mm in Sources */,
-				8AE0020A2A85189D00034885 /* ViewController.m in Sources */,
+				8AA7E57B2A8DF2DD005822DE /* ViewController.m in Sources */,
 				8AE002002A85188C00034885 /* CGSetCard.mm in Sources */,
 				8AE001FD2A85188C00034885 /* CGDeck.mm in Sources */,
 				8AE002012A85188C00034885 /* CGPlayingCard.mm in Sources */,

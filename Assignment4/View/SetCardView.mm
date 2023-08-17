@@ -20,7 +20,8 @@ const CGFloat kCornerRadius = 12.0;
 const CGFloat kCornerFontStandartSize = 180.0;
 const CGFloat kHalfCurveWidthPart = 8;
 const CGFloat kHalfCurveHightPart = 16;
-const CGFloat kSquiggleHightPart = 9;
+const CGFloat kSquiggleHightPart = 7;
+const NSInteger kStripesNumberInStripesFill = 3;
 
 #pragma mark -
 #pragma mark init
@@ -41,7 +42,7 @@ const CGFloat kSquiggleHightPart = 9;
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
-
+    [self setUp];
   }
   return self;
 }
@@ -129,7 +130,7 @@ const CGFloat kSquiggleHightPart = 9;
   NSInteger shapeWidth = shapePath.bounds.size.width;
   NSInteger shapeHight = shapePath.bounds.size.height;
 
-  for (int x = 0; x < shapeWidth; x += 5 ) {
+  for (int x = 0; x < shapeWidth; x += kStripesNumberInStripesFill) {
     [stripes moveToPoint:CGPointMake(shapeStartPoint.x + x, shapeStartPoint.y)];
     [stripes addLineToPoint:CGPointMake(shapeStartPoint.x + x, shapeStartPoint.y +shapeHight)];
   }
@@ -159,9 +160,6 @@ const CGFloat kSquiggleHightPart = 9;
   [shapePath addLineToPoint:CGPointMake(self.bounds.size.width * 3 / 4, startPoint.y)];
   [shapePath addLineToPoint:CGPointMake(self.bounds.size.width / 2, startPoint.y - self.bounds.size.height / 9)];
   [shapePath closePath];
-
-//  [[UIColor blueColor] setStroke];
-//  [shapePath stroke];
   return shapePath;
 }
 
@@ -193,19 +191,25 @@ const CGFloat kSquiggleHightPart = 9;
                controlPoint:CGPointMake(startPoint.x + 3 * halfCurveWidth,
                                         startPoint.y - curveHight)];
 
-  CGPoint lowerSquigglePoint = CGPointMake(startPoint.x + 4 * halfCurveWidth,
+  CGPoint lowerRightSquigglePoint = CGPointMake(startPoint.x + 4 * halfCurveWidth,
                                            startPoint.y + squiggleHight);
 
-  [path addLineToPoint:lowerSquigglePoint];
+  [path addQuadCurveToPoint:lowerRightSquigglePoint
+               controlPoint:CGPointMake(lowerRightSquigglePoint.x + halfCurveWidth,
+                                        startPoint.y + squiggleHight / 2)];
 
-  [path addQuadCurveToPoint:CGPointMake(lowerSquigglePoint.x - 2 * halfCurveWidth,
-                                        lowerSquigglePoint.y)
-               controlPoint:CGPointMake(lowerSquigglePoint.x - halfCurveWidth,
-                                        lowerSquigglePoint.y - curveHight)];
-  [path addQuadCurveToPoint:CGPointMake(lowerSquigglePoint.x - 4 * halfCurveWidth,
-                                        lowerSquigglePoint.y)
-               controlPoint:CGPointMake(lowerSquigglePoint.x - 3 * halfCurveWidth,
-                                        lowerSquigglePoint.y + curveHight)];
+  [path addQuadCurveToPoint:CGPointMake(lowerRightSquigglePoint.x - 2 * halfCurveWidth,
+                                        lowerRightSquigglePoint.y)
+               controlPoint:CGPointMake(lowerRightSquigglePoint.x - halfCurveWidth,
+                                        lowerRightSquigglePoint.y - curveHight)];
+  [path addQuadCurveToPoint:CGPointMake(lowerRightSquigglePoint.x - 4 * halfCurveWidth,
+                                        lowerRightSquigglePoint.y)
+               controlPoint:CGPointMake(lowerRightSquigglePoint.x - 3 * halfCurveWidth,
+                                        lowerRightSquigglePoint.y + curveHight)];
+
+  [path addQuadCurveToPoint:startPoint
+               controlPoint:CGPointMake(startPoint.x - halfCurveWidth,
+                                        startPoint.y + squiggleHight / 2)];
 
   [path closePath];
   return path;
@@ -222,7 +226,6 @@ const CGFloat kSquiggleHightPart = 9;
     default:
       return nil;
   }
-
 }
 
 - (void)drawShapesByAmount {
@@ -240,15 +243,12 @@ const CGFloat kSquiggleHightPart = 9;
 
 - (void)drawRect:(CGRect)rect {
   UIBezierPath *roundedRect = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-                                                          cornerRadius:[self cornerRadius]];
+                                                         cornerRadius:[self cornerRadius]];
   [roundedRect addClip];
-
   [self.chosen ? [UIColor yellowColor] : [UIColor whiteColor] setFill];
   UIRectFill(self.bounds);
-
-  [[UIColor blackColor] setStroke];
+  [[UIColor whiteColor] setStroke];
   [roundedRect stroke];
-
   [self drawShapesByAmount];
 }
 

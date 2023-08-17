@@ -33,7 +33,7 @@ const CGFloat kDefaultFaceCardScaleFactor = 0.9;
 - (void)setUp {
   self.chosen = NO;
   self.removedFromView = NO;
-  self.backgroundColor = nil;
+  self.backgroundColor = [UIColor clearColor];
   self.opaque = NO;
   self.contentMode = UIViewContentModeRedraw;
 }
@@ -46,7 +46,7 @@ const CGFloat kDefaultFaceCardScaleFactor = 0.9;
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
-
+    [self setUp];
   }
   return self;
 }
@@ -131,8 +131,6 @@ const CGFloat kDefaultFaceCardScaleFactor = 0.9;
                                      self.bounds.size.width * (1.0 - self.faceCardScaleFactor),
                                      self.bounds.size.height * (1.0 - self.faceCardScaleFactor));
       [faceImage drawInRect:imageRect];
-    } else {
-      [self drawPips];
     }
 
     [self drawCorners];
@@ -156,9 +154,7 @@ const CGFloat kDefaultFaceCardScaleFactor = 0.9;
   [self flip];
 }
 
-- (void)drawPips {
 
-}
 
 @end
 
